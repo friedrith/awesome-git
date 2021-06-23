@@ -17,9 +17,11 @@ It should be easy to use and save you time, not consume time.
 - git extension ([Git lens on VS code](https://gitlens.amod.io/))
 - go to develop to rebase `git dev` then `git pull --rebase` or `gpr`
 - `git rebase origin/develop` 
-- resolve conflict
+- resolve conflict 
 - update branch then commit `git commit -a --amend` or `gca!`
 - for push `git push --force origin/feat/... ` or `ggf`
+
+## How to configure git
 
 ```sh
 git config alias.mr '!sh -c '\''git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2'\'' -'
