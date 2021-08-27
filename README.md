@@ -26,6 +26,8 @@ It should be easy to use and save you time, not consume time.
 ```sh
 git config alias.mr '!sh -c '\''git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2'\'' -'
 git config alias.mrc '!sh -c '\''git branch | grep -w -i '\''mr-.*'\'' | xargs git branch -D'\'' -'
+git config alias.wip '!sh -c '\''git add -A && git commit --no-verify --no-gpg-sign -m '\''--wip-- [skip ci]'\'''\'' -'
+git config alias.unwip '!sh -c '\''git log -n 1 | grep -q -c -- "--wip--" && git reset HEAD~1'\'' -'
 git config alias.dev '!sh -c '\''git checkout develop'\'''
 git config --bool checkout.guess false
 
